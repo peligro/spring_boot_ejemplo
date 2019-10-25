@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		 <meta charset="utf-8" />
 	     <title>..:: Ejemplo 1 Spring Boot :...</title>
+	     <link th:href="@{/public/css/bootstrap.min.css}" rel="stylesheet" />
 	</head>
 	<body>
-		<h1>Hola mundo desde Spring Boot ñandú</h1>
+		<div class="container">
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="active"><a th:href="@{/index}">Inicio</a></li>
+			  <li role="presentation"><a th:href="@{/productos/index}">Productos CRUD</a></li>
+			  <li role="presentation"><a href="#">Login</a></li>
+			  <li role="presentation"><a href="#">Rest Client</a></li>
+			  <li role="presentation"><a href="#">Soap Client</a></li>
+			  <li role="presentation"><a href="#">Crear PDF</a></li>
+			  <li role="presentation"><a href="#">Crear Excel</a></li>
+			  <li role="presentation"><a href="#">Rest APIs</a></li>
+			</ul>
+			<h1>Hola mundo desde Spring Boot ñandú</h1>
+		<img alt="" th:src="@{/public/images/yoda.jpg}" width="50" height="50" />
+		</div>
 	</body>
 </html>
